@@ -1,0 +1,40 @@
+<html>
+      <head>
+          <title>WCT20|Records</title>
+          <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='self_css.css') }}">
+           
+      </head>    
+      <body ><br>
+              <h1 align="center" style="font-family:verdana" >Enter Details </h1><hr>
+               <form method="POST", action="/insert">
+                  <table border="2" align="center">
+				  <br>
+				  <br>
+                    <tr>
+                         <td align="center" width='150px'bgcolor="lightgray"> Opposition Team</td>
+                         <td><input type="type" name="opposition_team"></td>
+						 
+                    </tr> 
+                    <tr>
+                        <td align="center" bgcolor="lightgray">Runs</td>
+                        <td><input type="number" name="runs"></td>
+                    </tr> 
+                     <tr>
+                        <td align="center" bgcolor="lightgray">Wickets</td>
+                        <td><input type="number" name="wickets"></td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="lightgray">Match Date</td>
+                        <td><input type="date" name="match_date"></td>
+                    </tr>      
+						</table>
+						<br>
+                    <tr>
+                        <center><td><input type="submit" bgcolor="lightgray" style="font-size:20px" name="send" value="Submit"></td></center>
+					</tr>
+                    <!/table>
+                    </form>
+              
+      </body>
+      
+</html>

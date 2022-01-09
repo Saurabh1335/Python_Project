@@ -1,0 +1,38 @@
+<html>
+      <head>
+              <title>WCT20|Match Records</title>
+              
+              <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='self_css.css') }}">
+           
+      </head>
+	  <br>
+      <body bgcolor="white">
+              <h1 align="center"> Match Records </h1>
+              <h2 align="center">TEAM INDIA</p> 
+              <p align="center"> To Enter a Records Click on Link</p>
+			  <a href="/form" align="center" class> Entre Record</a><hr>
+			   <table  border="1" style="width:100%" bgcolor='lightgray' align="center">
+                       <tr bgcolor="gray">
+                            <th>Opposition Team</th>
+                            <th>Runs</th>
+                            <th>Wickets</th>
+                            <th>Match Date</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                            
+                    
+                       </tr>
+                       {%for x in d:%}
+                            <tr >
+                                <td align="center">{{x.1}}</td>
+                                <td align="center">{{x.2}}</td>
+                                <td align="center">{{x.3}}</td>
+                                <td align="center">{{x.4}}</td>
+                                
+                                <td><a href="/edit/{{x.0}}">Edit</a> </td>
+                                <td><a href="/delete/{{x.0}}">Delete</a> </td>
+                            </tr>
+                       {%endfor%}
+			  
+      </body>
+</html>
